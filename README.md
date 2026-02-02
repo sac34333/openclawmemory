@@ -2,11 +2,6 @@
 
 > **Personal AI assistant with a semantic brain — running entirely on your AWS EC2 instance.**
 
-[![System](https://img.shields.io/badge/System-OpenClaw-purple)](https://github.com/openclaw/openclaw)
-[![Engine](https://img.shields.io/badge/Engine-QMD-blue)](https://github.com/tobi/qmd)
-[![Platform](https://img.shields.io/badge/Platform-Ubuntu%2024.04-orange)](https://ubuntu.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-
 ---
 
 ## 📖 Table of Contents
@@ -21,7 +16,7 @@
 
 ---
 
-## 🧠 What is QMD?
+## What is QMD?
 
 **QMD** is not just a search tool — it is a **Local Hybrid Intelligence engine**. It combines three distinct search technologies running entirely **offline** on your server.
 
@@ -61,7 +56,7 @@ Text ───► Embedding Model ───► Vector (list of numbers)
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ### The Memory Layer Diagram
 
@@ -94,11 +89,11 @@ These models live in `~/.cache/qmd/models`. They are the reason you don't need O
 | `qwen3-reranker-0.6b` | Re-ranks results for relevance | ~640 MB |
 | `qmd-query-expansion-1.7B` | Expands vague queries | ~1.1 GB |
 
-> **📦 Total Disk Impact:** ~2.1 GB
+> **Total Disk Impact:** ~2.1 GB
 
 ---
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 
@@ -139,7 +134,7 @@ qmd update
 qmd embed --collection brain
 ```
 
-> **✅ Success Indicator:** If you see a progress bar downloading ~300MB+, it is working.
+> ** Success Indicator:** If you see a progress bar downloading ~300MB+, it is working.
 
 > [!NOTE]
 > **Progressive Model Downloads:**  
@@ -177,7 +172,7 @@ This forces QMD to use the reranker and query-expansion models, triggering their
 
 ---
 
-## ⚙️ Operational Configuration
+## Operational Configuration
 
 ### Directory Structure
 
@@ -202,7 +197,7 @@ Create this file to guide the AI on how to use QMD:
 ```markdown
 # AGENTS.md - Operational Guidelines
 
-## 🧠 QMD (Semantic Brain)
+##  QMD (Semantic Brain)
 **Status:** Installed & Active
 **Role:** Your primary method for retrieving information.
 
@@ -215,7 +210,7 @@ Create this file to guide the AI on how to use QMD:
 ### **How to Learn (Indexing)**
 - **Command:** `qmd update && qmd embed --collection brain`
 
-## 📂 Memory Standards
+##  Memory Standards
 | Content Type | File Location |
 | :--- | :--- |
 | **User Preferences** | `USER.md` |
@@ -223,7 +218,7 @@ Create this file to guide the AI on how to use QMD:
 | **Long-Term Facts** | `MEMORY.md` |
 | **Technical Knowledge** | `knowledge/TOPIC.md` |
 
-## 📄 Document Ingestion (Artifacts)
+##  Document Ingestion (Artifacts)
 **Workflow for Uploads:**
 1. **Save Original:** `artifacts/filename.ext`
 2. **Convert to Text:**
@@ -234,7 +229,7 @@ Create this file to guide the AI on how to use QMD:
 
 ---
 
-## 🔄 Workflows & Automation
+## Workflows & Automation
 
 ### A. Ingesting Documents (PDF/Word)
 
@@ -265,7 +260,7 @@ To ensure memory is updated without you asking, we use a Cron job.
 
 ---
 
-## 🔒 Verification: Cost & Privacy
+## Verification: Cost & Privacy
 
 > **Claim:** No API tokens are used for memory.
 
@@ -287,19 +282,19 @@ hf_tobil_qmd-query-expansion-1.7B-q4_k_m.gguf  (~1.1GB)
 
 ---
 
-## ✨ Benefits Summary
+## Benefits Summary
 
 | Feature | Benefit |
 |:--------|:--------|
-| 🔐 **Local & Private** | No data leaves your server |
-| 🔍 **Semantic Search** | "Find memory about X" works even if keywords differ |
-| 🖥️ **Shell Integration** | Bot calls `qmd query` natively via terminal |
-| 📝 **Markdown Native** | Your memory files stay as clean, readable text |
-| 💸 **Zero Cost** | No monthly API bill for embeddings or storage |
+| **Local & Private** | No data leaves your server |
+| **Semantic Search** | "Find memory about X" works even if keywords differ |
+| **Shell Integration** | Bot calls `qmd query` natively via terminal |
+| **Markdown Native** | Your memory files stay as clean, readable text |
+| **Zero Cost** | No monthly API bill for embeddings or storage |
 
 ---
 
-## 📚 Resources
+## Resources
 
 - **OpenClaw:** [GitHub](https://github.com/openclaw/openclaw) · [Docs](https://docs.openclaw.ai) · [Getting Started](https://docs.openclaw.ai/start/getting-started)
 - **QMD:** [GitHub](https://github.com/tobi/qmd)
