@@ -181,6 +181,7 @@ This forces QMD to use the reranker and query-expansion models, triggering their
 
 ### Directory Structure
 
+```
 ~/.openclaw/workspace/
 ├── AGENTS.md           # Operational Guidelines (provided by OpenClaw but by default is empty)
 ├── TOOLS.md            # Environment Context (provided by OpenClaw)
